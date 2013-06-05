@@ -107,6 +107,7 @@
         }
         else {
             sqlite3_close (db);
+            [openDBs removeObjectForKey:dbPath];
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"DB closed"];
         }
     }
